@@ -549,6 +549,7 @@
     "/images/psi.png": "/icons/plugins/psi/images/psi.svg",
     "/images/psi18x18.png": "/icons/plugins/psi/images/psi_18.svg",
     "/images/psiToolWindow.png": "/icons/plugins/psi/images/psiToolWindow.svg",
+    "/krasa/mavenhelper/icons/donate.gif": "/icons/plugins/vojtech/donate.svg",
     "/org/jetbrains/plugins/jumpToLine/nextStatement.svg":  "/icons/plugins/jumpToLine/nextStatement.svg",
     "/org/jetbrains/plugins/jumpToLine/nextStatementFail.svg": "/icons/plugins/jumpToLine/nextStatementFail.svg",
     "/org/jetbrains/kotlin/idea/icons/abstractClassKotlin.svg": "/icons/plugins/kotlin/abstractClassKotlin.svg",

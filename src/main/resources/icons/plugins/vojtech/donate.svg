@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="112.76mm" height="33.66mm" version="1.1" viewBox="0 0 112.76 33.66" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g transform="translate(-49.939 -131.25)">
+    <path accentTintDarker="fill" d="m52.711 141.55-0.95989 4.353c-0.23748 5.9232-0.36988 11.833 6.5801 16.857h93.687s5.2854-1.6992 5.3326-1.8902c0.0472-0.19103 2.6491-5.0848 2.6491-5.0848s1.0429-5.1221 1.0429-5.4141-0.38428-5.3627-0.38428-5.6395c0-0.27679-1.6555-3.6154-1.6555-3.6154z" style="stroke-width:.26458px;"/>
+    <path accentTint="fill" d="m51.878 144.01c2.8894 5.5377 8.9141 7.0927 17.451 6.7527h74.499c7.7715-0.0886 12.248-1.0884 16.365-7.4424l-1.0677-3.9721-5.0067-4.6978c-1.4844-1.4672-3.5771-1.2625-5.4781-1.5847h-87.682c-2.3426 0.88873-4.5357 2.076-6.4306 3.8585l-2.7317 5.3451z"/>
+    <path accentTint="stroke" d="m61.151 133.21c-12.958 0-12.452 30.016 0 30.016h88.919c16.57 0 12.465-30.295 0-30.295z" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.365"/>
+    <text transform="matrix(1.7489 0 0 1.7489 -63.369 -115.15)" style="fill:#000000;font-family:'Victor Mono';font-size:10.583px;line-height:0;shape-inside:url(#rect925);white-space:pre" xml:space="preserve"><tspan x="79.976562" y="154.294"><tspan accentContrastTint="stroke" style="font-family:monospace';font-style:italic;font-weight:500;line-height:1.25">Donate</tspan></tspan></text>
+  </g>
+</svg>
