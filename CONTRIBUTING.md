@@ -1,6 +1,12 @@
 Contributing
 ---
 
+# Outline
+
+- [Build Process](#build-process-high-level-overview)
+- [Editing Themes](#editing-themes)
+- [Creating New Themes](#creating-new-themes)
+
 # Build Process High level overview
 
 I won't go into the minor details of the theme building process, however I will talk about the high level details of
@@ -94,6 +100,10 @@ See [creating a custom UI theme for more details](https://plugins.jetbrains.com/
 
 Here is another
 good [resource for customizing themes](https://github.com/one-dark/jetbrains-one-dark-theme/discussions/206#discussioncomment-368647)
+
+### Submitting PR
+
+This is an [example of editing existing themes](https://github.com/doki-theme/doki-theme-jetbrains/pull/391).
 
 # Creating New Themes
 
