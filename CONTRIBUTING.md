@@ -1,7 +1,7 @@
 Contributing
 ---
 
-# High level overview
+# Build Process High level overview
 
 I won't go into the minor details of the theme building process, however I will talk about the high level details of
 what is accomplished.
@@ -74,15 +74,26 @@ directory.
 Inside the `buildSrc` directory, there will be 2 directories:
 
 - `src` - holds the code that builds the themes.
-- `assets` - defines the platform specific assets needed to build the themes.
+- `assets` - defines the platform specific assets needed to build the themes. This directory normally contains two child
+  directories.
+  - `themes` - holds the [application definitions](#application-specific-templates)
+  - `templates` - if not empty, normally contains various text files that can be evaluated to replace variables with
+    values. Some cases, they also contain templates for evaluating things such as look and feel, colors, and other
+    things.
 
-### JetBrains Specifics
+### JetBrains Themes specifics
 
 There are two important pieces that compose a theme:
 
 - `theme.json` - which defines the look and feel of the IDE. The panels and stuff that isn't code.
 - `editor_scheme.xml` - which defines the colors and such for the code editor (and also various look and feel components
   which is annoying sometimes).
+
+See [creating a custom UI theme for more details](https://plugins.jetbrains.com/docs/intellij/themes.html#creating-custom-ui-themes)
+.
+
+Here is another
+good [resource for customizing themes](https://github.com/one-dark/jetbrains-one-dark-theme/discussions/206#discussioncomment-368647)
 
 # Creating New Themes
 
@@ -139,24 +150,28 @@ You should be good after that!
 
 ## Theme Creation Process
 
-This part is mostly automated, for the most part.
+This part is mostly automated, for the most part. There is only one thing you'll need to manually add. The rest of the
+steps will be performed by executing a script.
 
 When you add a new master theme definition in the `masterThemes/definition`, the convention
 is `<animeName>/<characterName>/<light|dark>/<characterName>.<light|dark>.master.definition.json`.
 _Please avoid spaces in the `animeName` & `characterName`._
 
-Once that is done, it's now time to generate the application specific templates, which allow us to control theme
-specific settings.
+### Application specific templates
+
+Once you have a new master theme definition, it's now time to generate the application specific templates, which allow
+us to control individual theme specific settings.
 
 You'll want to edit the function used by `buildApplicationTemplate`
 and `appName` [defined here](https://github.com/doki-theme/doki-master-theme/blob/596bbe7b258c65e485257a14887ee9b4e0e8b659/buildSrc/AppThemeTemplateGenerator.ts#L79)
 in your `masterThemes` directory.
 
-In this case the `buildApplicationsTemplate` should use the `jetbrainsTemplate` and `appName` should be `jetbrains`.
+In the case of this plugin the `buildApplicationsTemplate` should use the `jetbrainsTemplate` and `appName` should
+be `jetbrains`.
 
 Once this is done, we can now run the `generateAssets` script. Which will walk the master theme definitions and create
 blank assets in the expected folder structure, inside various directories in the `<workspace-root>/doki-theme-assets/`
-directory .
+directory.
 
 After that, we need run the `generateTemplates` script. Which will walk the master theme definitions and create the new
 templates in the `<repo-root>/buildSrc/assets/themes` directory (and update existing ones).
