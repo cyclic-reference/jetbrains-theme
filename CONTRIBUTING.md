@@ -1,11 +1,19 @@
 Contributing
 ---
 
+# High level overview
+
+I won't go into the minor details of the theme building process, however I will talk about the high level details of
+what is accomplished.
+
+All themes have a base template that they inherit from. Themes have the ability to choose their inherited parent. Each
+child has the ability to override any attributes defined by the parent. This mitigates any one-off issues for themes
+that are captured by the global shared style.
+
 # Editing Themes
 
 ## Editing Themes Required Software
 
-- Git
 - Java 11
 - IntellIJ 2020.3+
 
@@ -68,16 +76,7 @@ Inside the `buildSrc` directory, there will be 2 directories:
 - `src` - holds the code that builds the themes.
 - `assets` - defines the platform specific assets needed to build the themes.
 
-**High level overview**
-
-I won't go into the minor details of the theme building process, however I will talk about the high level details of
-what is accomplished.
-
-All themes have a base template that they inherit from. Themes have the ability to choose their inherited parent. Each
-child has the ability to override any attributes defined by the parent. This mitigates any one-off issues for themes
-that are captured by the global shared style.
-
-**JetBrains Specifics**
+### JetBrains Specifics
 
 There are two important pieces that compose a theme:
 
@@ -168,7 +167,7 @@ The code defined in the `buildSrc/src` directory is part of the Doki Theme gradl
 task. This task gets run everytime you run the IDE, or build the plugin. It does all the annoying tedious stuff such as:
 
 - Putting the theme definition in the `plugin.xml`
-- Evaluating the `theme.json` and `editor_schema.xml`
+- Evaluating the `theme.json` and `editor_schema.xml`. See [JetBrains Specifics](#jetbrains-specifics) for more details
 
 When making changes to the JetBrains templates, there are two options for the editor scheme creation:
 
@@ -191,3 +190,8 @@ Here are all the relevant gradle tasks you'll be using:
 - `runIde`
 - `buildPlugin` - if you want to manually install the plugin to an existing IDE.
 
+### Submitting a pull request.
+
+Right now, the pre-merge pipeline will pull down the most current master themes and attempt to `buildPlugin`. This is
+inconvenient if your new themes are not in master, then your pre-merge pipeline will fail. It's not going to break
+anything, but the CI will have to be run again once the new themes are part of the master theme suite.
